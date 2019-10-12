@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import * as serviceWorker from './serviceWorker';
 import { DatePicker, message } from 'antd';
 import 'antd/dist/antd.css';
 import './index.css';
@@ -33,8 +34,8 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 
-//if (process.env.NODE_ENV === 'development') {
-//  serviceWorker.unregister()
-//} else {
-// serviceWorker.register()
-//}
+if (process.env.NODE_ENV === 'development') {
+  serviceWorker.unregister()
+} else {
+ serviceWorker.register()
+}

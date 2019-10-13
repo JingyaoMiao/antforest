@@ -1,40 +1,96 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ConfigProvider, DatePicker, message } from 'antd';
-// 由于 antd 组件的默认文案是英文，所以需要修改为中文
-import zhCN from 'antd/es/locale/zh_CN';
-import moment from 'moment';
-import 'moment/locale/zh-cn';
+
 import 'antd/dist/antd.css';
 import './index.css';
+import { Layout, Menu, Icon, Typography } from 'antd';
 
-moment.locale('zh-cn');
+const { Header, Content, Footer, Sider } = Layout;
+const { SubMenu } = Menu;
+const { Title, Text } = Typography;
 
-class App extends React.Component {
+class SiderDemo extends React.Component {
   state = {
-    date: null,
+    collapsed: false,
   };
 
-  handleChange = date => {
-    message.info(`您选择的日期是: ${date ? date.format('YYYY-MM-DD') : '未选择'}`);
-    this.setState({ date });
+  onCollapse = collapsed => {
+    console.log(collapsed);
+    this.setState({ collapsed });
   };
+
+  toggle = () => {
+    this.setState({
+      collapsed: !this.state.collapsed,
+    });
+  };
+
   render() {
-    const { date } = this.state;
     return (
-      <ConfigProvider locale={zhCN}>
-        <div style={{ width: 400, margin: '100px auto' }}>
-          <DatePicker onChange={this.handleChange} />
-          <div style={{ marginTop: 20 }}>
-            当前日期：{date ? date.format('YYYY-MM-DD') : '未选择'}
-          </div>
-        </div>
-      </ConfigProvider>
+      <Layout style={{ minHeight: '100vh' }}>
+        <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
+          <div className="logo" />
+          <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+            <SubMenu
+              key="user"
+              title={
+                <span>
+                  <Icon type="user" />
+                  <span>User</span>
+                </span>
+              }
+            >
+            <Menu.Item key="homepage">Home Page</Menu.Item>
+            <Menu.Item key="login">Login Page</Menu.Item>
+            <Menu.Item key="signup">Signup Page</Menu.Item>
+
+            </SubMenu>
+
+            <SubMenu
+              key="category"
+              title={
+                <span>
+                  <Icon type="desktop" />
+                  <span>Category</span>
+                </span>
+              }
+            >
+            <Menu.Item key="trees">View Trees</Menu.Item>
+            <Menu.Item key="products">Relates Products</Menu.Item>
+
+            </SubMenu>
+            <Menu.Item key="upload">
+              <Icon type="upload" />
+              <span>Uploading</span>
+            </Menu.Item>
+          </Menu>
+        </Sider>
+        <Layout>
+          <Header style={{ background: '#fff', padding: 0 }}>
+            <Icon
+              className="trigger"
+              type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
+              onClick={this.toggle}
+            />
+          </Header>
+          <Content
+            style={{
+              margin: '24px 16px',
+              padding: 24,
+              background: '#fff',
+              minHeight: 280,
+            }}
+          >
+            <Title mark>Welcome to Ant Forest!</Title>
+          </Content>
+        </Layout>
+      </Layout>
     );
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<SiderDemo />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

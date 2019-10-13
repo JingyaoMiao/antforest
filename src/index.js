@@ -22,32 +22,32 @@ const AutoCompleteOption = AutoComplete.Option;
 
 const residences = [
   {
-    value: 'zhejiang',
-    label: 'Zhejiang',
+    value: 'Auckland',
+    label: 'Auckland',
     children: [
       {
-        value: 'hangzhou',
-        label: 'Hangzhou',
+        value: 'CBD',
+        label: 'CBD',
         children: [
           {
-            value: 'xihu',
-            label: 'West Lake',
+            value: 'Queen Street',
+            label: 'Queen Street',
           },
         ],
       },
     ],
   },
   {
-    value: 'jiangsu',
-    label: 'Jiangsu',
+    value: 'Wellington',
+    label: 'Wellington',
     children: [
       {
-        value: 'nanjing',
-        label: 'Nanjing',
+        value: 'CBD',
+        label: 'CBD',
         children: [
           {
-            value: 'zhonghuamen',
-            label: 'Zhong Hua Men',
+            value: 'Mount Victoria',
+            label: 'Mount Victoria',
           },
         ],
       },
@@ -129,11 +129,11 @@ class RegistrationForm extends React.Component {
       },
     };
     const prefixSelector = getFieldDecorator('prefix', {
-      initialValue: '86',
+      initialValue: '64',
     })(
       <Select style={{ width: 70 }}>
-        <Option value="86">+86</Option>
-        <Option value="87">+87</Option>
+        <Option value="64">+64</Option>
+        <Option value="09">+09</Option>
       </Select>,
     );
 

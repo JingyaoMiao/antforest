@@ -102,7 +102,7 @@ class SiderDemo extends React.Component {
               }}>
               </img>
               
-              <img src={Fruit} alt="evergreen" 
+              <img src={Fruit} alt="fruit" 
               style={{
                 margin:'24px 16px',
                 height:'350px',
@@ -110,7 +110,7 @@ class SiderDemo extends React.Component {
               }}>
               </img>
 
-              <img src={Gum} alt="evergreen" 
+              <img src={Gum} alt="gum" 
               style={{
                 margin:'24px 16px',
                 height:'350px',
@@ -118,7 +118,7 @@ class SiderDemo extends React.Component {
               }}>
               </img>
 
-              <img src={Hardwood} alt="evergreen" 
+              <img src={Hardwood} alt="hardwood" 
               style={{
                 margin:'24px 16px',
                 height:'350px',
@@ -126,7 +126,7 @@ class SiderDemo extends React.Component {
               }}>
               </img>
 
-              <img src={Hedge} alt="evergreen" 
+              <img src={Hedge} alt="hedge" 
               style={{
                 margin:'24px 16px',
                 height:'350px',
@@ -134,7 +134,7 @@ class SiderDemo extends React.Component {
               }}>
               </img>
 
-              <img src={NZNative} alt="evergreen" 
+              <img src={NZNative} alt="nznative" 
               style={{
                 margin:'24px 16px',
                 height:'350px',
@@ -142,7 +142,7 @@ class SiderDemo extends React.Component {
               }}>
               </img>
 
-              <img src={Palm} alt="evergreen" 
+              <img src={Palm} alt="palm" 
               style={{
                 margin:'24px 16px',
                 height:'350px',

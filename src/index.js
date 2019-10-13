@@ -101,7 +101,13 @@ class SiderDemo extends React.Component {
                 width: '350px',
               }}>
               </img>
-              
+              <Text style ={{
+                position:'absolute',
+                top:'550px',
+                left:'385px',
+                fontSize:'150%',
+                fontWeight:'bold',
+              }}>Evergreen</Text>
               <img src={Fruit} alt="fruit" 
               style={{
                 margin:'24px 16px',
@@ -109,12 +115,20 @@ class SiderDemo extends React.Component {
                 width: '350px',
               }}>
               </img>
+              <Text style ={{
+                position:'absolute',
+                top:'550px',
+                left:'790px',
+                fontSize:'150%',
+                fontWeight:'bold',
+              }}>Fruit</Text>
 
               <img src={Gum} alt="gum" 
               style={{
                 margin:'24px 16px',
                 height:'350px',
                 width: '350px',
+                
               }}>
               </img>
 

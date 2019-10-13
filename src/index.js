@@ -15,9 +15,6 @@ const handleClick = (e, link) => {
   e.preventDefault();
   console.log(link);
 };
-
-class App extends React.Component {
-
 //const news = require('./components/news.png')
 const Evergreen = require('./components/EvergreenTree.png')
 const Fruit = require('./components/FruitTree.png')
@@ -27,6 +24,7 @@ const Hedge = require('./components/HedgeTree.png')
 const NZNative = require('./components/NZNativeTree.png')
 const Palm = require('./components/PalmTree.png')
 
+class App extends React.Component {
   state = {
     collapsed: false,
   };
@@ -57,9 +55,21 @@ const Palm = require('./components/PalmTree.png')
                 </span>
               }
             >
-            <Menu.Item key="homepage">Home Page</Menu.Item>
-            <Menu.Item key="login">Login Page</Menu.Item>
-            <Menu.Item key="signup">Signup Page</Menu.Item>
+            <Menu.Item key="homepage">
+              <a href="./" rel="noopener noreferrer">
+                Home Page
+              </a>
+            </Menu.Item>
+            <Menu.Item key="login">
+              <a href="./loginform.js" rel="noopener noreferrer">
+                Login Page
+              </a>
+            </Menu.Item>
+            <Menu.Item key="register">
+              <a href="registerform.js" rel="noopener noreferrer">
+                Register Page
+              </a>
+            </Menu.Item>
 
             </SubMenu>
 

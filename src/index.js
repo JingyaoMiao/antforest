@@ -1,16 +1,22 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import * as serviceWorker from './serviceWorker';
 import 'antd/dist/antd.css';
 import './index.css';
-import { Layout, Menu, Icon, Typography } from 'antd';
+import { Anchor, Layout, Menu, Icon, Typography } from 'antd';
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
+const { Link } = Anchor;
 const { Title, Text } = Typography;
 
-class SiderDemo extends React.Component {
+const handleClick = (e, link) => {
+  e.preventDefault();
+  console.log(link);
+};
+
+class App extends React.Component {
   state = {
     collapsed: false,
   };
@@ -90,14 +96,14 @@ class SiderDemo extends React.Component {
   }
 }
 
-ReactDOM.render(<SiderDemo />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 
-//if (process.env.NODE_ENV === 'development') {
-//  serviceWorker.unregister()
-//} else {
-// serviceWorker.register()
-//}
+if (process.env.NODE_ENV === 'development') {
+  serviceWorker.unregister()
+} else {
+ serviceWorker.register()
+}

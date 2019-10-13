@@ -17,6 +17,16 @@ const handleClick = (e, link) => {
 };
 
 class App extends React.Component {
+
+//const news = require('./components/news.png')
+const Evergreen = require('./components/EvergreenTree.png')
+const Fruit = require('./components/FruitTree.png')
+const Gum = require('./components/GumTree.png')
+const Hardwood = require('./components/HardwoodTree.png')
+const Hedge = require('./components/HedgeTree.png')
+const NZNative = require('./components/NZNativeTree.png')
+const Palm = require('./components/PalmTree.png')
+
   state = {
     collapsed: false,
   };
@@ -88,7 +98,65 @@ class App extends React.Component {
               minHeight: 280,
             }}
           >
-            <Title mark>Welcome to Ant Forest!</Title>
+            <Title mark><center>Welcome to Ant Forest!</center></Title>
+
+            <img src={Evergreen} alt="evergreen"
+              style={{
+                margin:'24px 16px',
+                height:'350px',
+                width: '350px',
+              }}>
+              </img>
+
+              <img src={Fruit} alt="fruit"
+              style={{
+                margin:'24px 16px',
+                height:'350px',
+                width: '350px',
+              }}>
+              </img>
+
+              <img src={Gum} alt="gum"
+              style={{
+                margin:'24px 16px',
+                height:'350px',
+                width: '350px',
+              }}>
+              </img>
+
+              <img src={Hardwood} alt="hardwood"
+              style={{
+                margin:'24px 16px',
+                height:'350px',
+                width: '350px',
+              }}>
+              </img>
+
+              <img src={Hedge} alt="hedge"
+              style={{
+                margin:'24px 16px',
+                height:'350px',
+                width: '350px',
+              }}>
+              </img>
+
+              <img src={NZNative} alt="nznative"
+              style={{
+                margin:'24px 16px',
+                height:'350px',
+                width: '350px',
+              }}>
+              </img>
+
+              <img src={Palm} alt="palm"
+              style={{
+                margin:'24px 16px',
+                height:'350px',
+                width: '350px',
+              }}>
+              </img>
+
+
           </Content>
         </Layout>
       </Layout>

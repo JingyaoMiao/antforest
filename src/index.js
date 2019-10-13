@@ -10,6 +10,16 @@ const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 const { Title, Text } = Typography;
 
+//const news = require('./components/news.png')
+const Evergreen = require('./components/EvergreenTree.png')
+const Fruit = require('./components/FruitTree.png')
+const Gum = require('./components/GumTree.png')
+const Hardwood = require('./components/HardwoodTree.png')
+const Hedge = require('./components/HedgeTree.png')
+const NZNative = require('./components/NZNativeTree.png')
+const Palm = require('./components/PalmTree.png')
+
+
 class SiderDemo extends React.Component {
   state = {
     collapsed: false,
@@ -82,13 +92,72 @@ class SiderDemo extends React.Component {
               minHeight: 280,
             }}
           >
-            <Title mark>Welcome to Ant Forest!</Title>
+            <Title mark><center>Welcome to Ant Forest!</center></Title>
+            
+            <img src={Evergreen} alt="evergreen" 
+              style={{
+                margin:'24px 16px',
+                height:'350px',
+                width: '350px',
+              }}>
+              </img>
+              
+              <img src={Fruit} alt="evergreen" 
+              style={{
+                margin:'24px 16px',
+                height:'350px',
+                width: '350px',
+              }}>
+              </img>
+
+              <img src={Gum} alt="evergreen" 
+              style={{
+                margin:'24px 16px',
+                height:'350px',
+                width: '350px',
+              }}>
+              </img>
+
+              <img src={Hardwood} alt="evergreen" 
+              style={{
+                margin:'24px 16px',
+                height:'350px',
+                width: '350px',
+              }}>
+              </img>
+
+              <img src={Hedge} alt="evergreen" 
+              style={{
+                margin:'24px 16px',
+                height:'350px',
+                width: '350px',
+              }}>
+              </img>
+
+              <img src={NZNative} alt="evergreen" 
+              style={{
+                margin:'24px 16px',
+                height:'350px',
+                width: '350px',
+              }}>
+              </img>
+
+              <img src={Palm} alt="evergreen" 
+              style={{
+                margin:'24px 16px',
+                height:'350px',
+                width: '350px',
+              }}>
+              </img>
+              
+          
           </Content>
         </Layout>
       </Layout>
     );
   }
 }
+
 
 ReactDOM.render(<SiderDemo />, document.getElementById('root'));
 
